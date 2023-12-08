@@ -1,0 +1,7 @@
+body{
+  background-image: url(../assets/okimg.webp);
+  background-position: -10vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+}

@@ -1,0 +1,10 @@
+<body>
+  <input type="number" [(ngModel)]="edad">
+
+<ul>
+  <li *ngFor="let item of listado|filterCI:'':edad">
+    {{item.nombre}}
+  </li>
+</ul>
+
+</body>
