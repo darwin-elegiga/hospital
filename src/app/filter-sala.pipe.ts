@@ -7,14 +7,26 @@ import { Pacientes } from './paciente';
 })
 export class FilterSalaPipe implements PipeTransform {
 
-  transform(value: string[], sala:number,paciente:Pacientes[]): string[] {
-    let aux:string[]=[];
+  transform(value: Pacientes[], sala:number,paciente:Pacientes[]): Pacientes[] {
+    let aux:Pacientes[]=[];
     for(let i=0;i<value.length; i++){
       if(paciente[i].sala==sala){
-        aux.push(paciente[i].nombre + " " +paciente[i].apellido)
+        aux.push(paciente[i] )
       }
     }
-    return aux.sort();
+
+    aux.sort((a,b)=>{
+      if(a.nombre.toLowerCase()<b.nombre.toLowerCase()){
+        return -1
+      }
+      if(a.nombre.toLowerCase()>b.nombre.toLowerCase()){
+        return 1
+      }
+      return 0;
+    })
+
+
+    return aux;
   }
 
 }

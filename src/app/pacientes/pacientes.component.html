@@ -1,0 +1,31 @@
+<body>
+
+  <div class="principal">
+  <input type="text" placeholder="Buscar por nombre" [(ngModel)]="nombre">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nombre </th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Municipio</th>
+      <th scope="col">Sala</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">CI</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listado|filterNombre:nombre">
+      <td>{{item.nombre|uppercase}}</td>
+      <td>{{item.apellido|uppercase}}</td>
+      <td>{{item.municipio|uppercase}}</td>
+      <td>{{item.sala}}</td>
+      <td *ngIf="item.sexo">MASCULINO</td>
+      <td *ngIf="!item.sexo">FEMENINO</td>
+      <td>{{item.ci}}</td>
+    </tr>
+  </tbody>
+  </table>
+
+  </div>
+</body>

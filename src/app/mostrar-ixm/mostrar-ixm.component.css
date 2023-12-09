@@ -6,3 +6,20 @@ body{
   background-size: contain;
   height: 100vh;
 }
+.principal{
+  position: relative;
+  width: 700px;
+  right: -40%;
+  top: 10%;
+  background-color: rgba(0, 255, 255, 0.359);
+  padding: 30px;
+  border-radius: 30px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+input{
+  align-self: first baseline;
+ }

@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { FilterCIPipe } from './filter-ci.pipe';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,19 @@ import { FilterCIPipe } from './filter-ci.pipe';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+
+  }
   title = 'Hospital Pediatrico';
-  desplegar(){}
+
+  visible(){
+    var ul:any=document.querySelector(".dropdown");
+    ul.classList.toggle("ul_visible");
+  }
+  salir(){
+    var ul:any=document.querySelector(".dropdown");
+    ul.classList.remove("ul_visible");
+  }
+
 }

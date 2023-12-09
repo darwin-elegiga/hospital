@@ -5,6 +5,8 @@ body{
   background-repeat: no-repeat;
   background-size: contain;
   height: 100vh;
+
+
 }
 .principal{
   position: relative;
@@ -18,8 +20,8 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
-justify-content: center;
+  justify-content: center;
 }
 input{
-  align-self: first baseline;
- }
+ align-self: first baseline;
+}

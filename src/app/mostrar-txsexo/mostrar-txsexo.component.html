@@ -1,4 +1,22 @@
 <body>
-  <div *ngFor="let item of listado|filterSexo">{{item}}</div>
+<div class="principal">
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Cantidad de hombre </th>
+        <th scope="col">Cantidad de mujeres </th>
+        <th scope="col">Total </th>
+      </tr>
+    </thead>
+    <tbody>
+      <td>{{hombres}}</td>
+      <td>{{mujeres}}</td>
+      <td>{{mujeres + hombres}}</td>
+
+    </tbody>
+    </table>
+
+</div>
 
 </body>

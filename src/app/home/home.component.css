@@ -1,0 +1,18 @@
+.fondo{
+  background-image: url(./doc2.webp);
+  /* background-position-x: -10vw; */
+  background-position-y: 8vh;
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100vh;
+}
+.principal{
+  position: relative;
+  width: 900px;
+  right: -35%;
+  top: 10%;
+  padding: 30px;
+  border-radius: 30px;
+  height: 500px;
+  z-index: 1;
+}

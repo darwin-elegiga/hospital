@@ -16,17 +16,13 @@ export class MostrarPxsComponent implements OnInit {
   opciones:number=NaN;
 
   listado:Pacientes[]=[];
-  pacientesSala:string[]=[];
 
 
 
   constructor(private servicio:DSService){}
   ngOnInit(): void {
     this.listado=this.servicio.listadopacientes;
-    for(let i=0; i<this.listado.length;i++){
-      this.pacientesSala.push(this.listado[i].nombre +" "+ this.listado[i].apellido)
-    }
-    this.pacientesSala.sort();
+
   }
 
 

@@ -1,26 +1,48 @@
 <body>
 
 
-<select name="" id="" [(ngModel)]="opciones" >
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-  <option value="11">11</option>
-  <option value="12">12</option>
-  <option value="13">13</option>
-  <option value="14">14</option>
-  <option value="15">15</option>
-</select>
+<div class="principal">
+    <h2>Buscador de pacientes por sala</h2>
+    <select name="" placeholder="Seleccione" id="" [(ngModel)]="opciones" >
 
-<ul style="position: relative;">
-  <li *ngFor="let item of pacientesSala|filterSala:opciones:listado">{{item}}</li>
-</ul>
+      <option value="1">sala 1</option>
+      <option value="2">sala 2</option>
+      <option value="3">sala 3</option>
+      <option value="4">sala 4</option>
+      <option value="5">sala 5</option>
+      <option value="6">sala 6</option>
+      <option value="7">sala 7</option>
+      <option value="8">sala 8</option>
+      <option value="9">sala 9</option>
+      <option value="10">sala 10</option>
+      <option value="11">sala 11</option>
+      <option value="12">sala 12</option>
+      <option value="13">sala 13</option>
+      <option value="14">sala 14</option>
+      <option value="15">sala 15</option>
+    </select>
 
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellidos</th>
+          <th scope="col">CI</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listado|filterSala:opciones:listado">
+          <td>{{item.nombre|uppercase}}</td>
+          <td>{{item.apellido|uppercase}}</td>
+          <td>{{item.ci|uppercase}}</td>
+
+        </tr>
+      </tbody>
+      </table>
+
+
+</div>
 </body>

@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { FilterCIPipe } from '../filter-ci.pipe';
 import { DSService } from '../ds.service';
 import { Pacientes } from '../paciente';
+import { FilterNombrePipe } from '../filter-nombre.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-mostrar-pxe',
+  selector: 'app-pacientes',
   standalone: true,
-  imports: [CommonModule,FormsModule,FilterCIPipe],
-  templateUrl: './mostrar-pxe.component.html',
-  styleUrl: './mostrar-pxe.component.css'
+  imports: [CommonModule,FilterNombrePipe,FormsModule],
+  templateUrl: './pacientes.component.html',
+  styleUrl: './pacientes.component.css'
 })
-export class MostrarPxeComponent implements OnInit{
-  edad:number=NaN;
+export class PacientesComponent implements OnInit {
   listado:Pacientes[]=[];
+  nombre:string=''
   constructor(private servicio:DSService){}
   ngOnInit(): void {
     this.listado=this.servicio.listadopacientes
   }
-
 }

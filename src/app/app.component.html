@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark" style="position: fixed;width: 100%;">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="">Logo</a>
+    <a class="navbar-brand" routerLink='' >Logo</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,29 +8,37 @@
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="xci">CI</a>
+          <a class="nav-link" routerLink="quienes">Quienes somos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="pxs">Sala</a>
+          <a class="nav-link" routerLink="pacientes">Pacientes</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" routerLink="pxsexo">sexo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="xpe">Edad</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="pxm">Municipios</a>
+          <div class="buscador">
+            <a class="buscador_a nav-link" (click)="visible()"> Buscador </a>
+
+          <ul class="dropdown">
+            <li><a class="opciones nav-link" (click)="salir()" routerLink="xci">Buscar por CI</a></li>
+            <li><a class="opciones nav-link" (click)="salir()" routerLink="pxs">Mostrar pacientes por salas</a></li>
+            <li><a class="opciones nav-link" (click)="salir()" routerLink="pxsexo">Mostrar total por sexo</a></li>
+            <li><a class="opciones nav-link" (click)="salir()" routerLink="pxm">Mostar porciento por Municipios</a></li>
+            <li><a class="opciones nav-link" (click)="salir()" routerLink="xpe">Buscar por edad</a></li>
+          </ul>
+
+          </div>
 
         </li>
+
 
       </ul>
 
     </div>
   </div>
 
-
 </nav>
+
+
 
 
 <router-outlet></router-outlet>
